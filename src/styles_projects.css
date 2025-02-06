@@ -1,5 +1,5 @@
 body {
-  background-color: #242933;
+  background-color: #1B2133;
   color: #fff;
   font-family: sans-serif;
   margin: 0;
@@ -55,7 +55,7 @@ header {
 
 
 .sidebar-button {
-  background-color: #343a40;
+  background-color: hsla(240, 4%, 5%, 0.63);
   color: #fff;
   border: 1px solid black; /* Добавлено */
   padding: 15px 20px;
@@ -100,44 +100,51 @@ header {
   color: rgba(255, 255, 255, 0.3); /* Полупрозрачный */
 }
 
+.center-container {
+  display: flex; /* Или можно использовать margin: 0 auto; */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center;  /* Центрирование по вертикали (если нужно) */
+  min-height: 100vh; /* Чтобы таблица была по центру даже если мало контента, можно убрать */
+}
+
 .table-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Две колонки одинаковой ширины */
-  border-radius: 20px; /* Радиус закругления углов */
-  overflow: hidden; /* Обрезать содержимое, выходящее за границы закругления */
-  width: 400px; /* Ширина таблицы, настройте под ваши нужды */
-  background-color: #0c0c0d7e; /* Цвет фона таблицы */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+display: grid;
+grid-template-columns: 1fr 1fr; /* Две колонки одинаковой ширины */
+border-radius: 20px; /* Радиус закругления углов */
+overflow: hidden; /* Обрезать содержимое, выходящее за границы закругления */
+width: 400px; /* Ширина таблицы, настройте под ваши нужды */
+background-color:hsla(240, 4%, 5%, 0.63); /* Цвет фона таблицы */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+position: relative;
 }
 
 .table-cell {
-  padding: 10px; /* Отступы внутри ячеек */
-  border-bottom: 1px solid #000000; /* Горизонтальная разделительная линия */
-  color: white; /* Цвет текста */
-  font-family: sans-serif;
+padding: 10px; /* Отступы внутри ячеек */
+border-bottom: 1px solid #000000; /* Горизонтальная разделительная линия */
+color: white; /* Цвет текста */
+font-family: sans-serif;
 }
 
 /* Убрать нижнюю линию у последних ячеек */
 .table-cell:nth-last-child(-n+2) {
-  border-bottom: none;
+border-bottom: none;
 }
 
 /* Вертикальная линия посередине */
 .table-container::after {
-  content: "";
-  position: relative;
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background-color: #ffffff; /* Цвет линии */
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+left: 50%;
+width: 1px;
+background-color: #000000; /* Цвет линии */
 }
 
 .right-project-item {
   display: inline-flex;
   align-items: center;
-  background-color: #343a40;
+  background-color: hsla(240, 4%, 5%, 0.63);
   border-radius: 15px; /* Изменено */
   height: 50px; /* Изменено */
   width: 400px; /* Изменено */
