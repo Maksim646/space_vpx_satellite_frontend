@@ -1,0 +1,166 @@
+body {
+  background-color: #242933;
+  color: #fff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px;
+  text-align: right;
+}
+
+.user-info {
+  display: inline-flex;
+  align-items: center;
+  background-color: #D9D9D9;
+  color: #000000;
+  border-radius: 15px;
+  padding: 13px 10px;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 244px;
+}
+
+.user-info span {
+  margin-left: 30px;
+}
+
+.dashboard-container {
+  display: flex;
+  flex: 1;
+  padding: 30px;
+}
+
+.sidebar {
+  width: 400px; /* Изменено */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.left-sidebar {
+  margin-right: 30px;
+}
+
+.right-sidebar {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+
+
+.sidebar-button {
+  background-color: #343a40;
+  color: #fff;
+  border: 1px solid black; /* Добавлено */
+  padding: 15px 20px;
+  border-radius: 15px; /* Изменено */
+  text-align: left;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  flex-grow: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавлено */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 660px; /* Добавлено */
+}
+
+.create-project-button {
+  background-color: transparent; /* Прозрачный фон */
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 15px; /* Изменено */
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+  position: relative; /* Для позиционирования плюсика */
+}
+
+/* Плюсик для кнопки */
+.create-project-button::after {
+  content: '+';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.3); /* Полупрозрачный */
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Две колонки одинаковой ширины */
+  border-radius: 20px; /* Радиус закругления углов */
+  overflow: hidden; /* Обрезать содержимое, выходящее за границы закругления */
+  width: 400px; /* Ширина таблицы, настройте под ваши нужды */
+  background-color: #0c0c0d7e; /* Цвет фона таблицы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+}
+
+.table-cell {
+  padding: 10px; /* Отступы внутри ячеек */
+  border-bottom: 1px solid #000000; /* Горизонтальная разделительная линия */
+  color: white; /* Цвет текста */
+  font-family: sans-serif;
+}
+
+/* Убрать нижнюю линию у последних ячеек */
+.table-cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+/* Вертикальная линия посередине */
+.table-container::after {
+  content: "";
+  position: relative;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #ffffff; /* Цвет линии */
+}
+
+.right-project-item {
+  display: inline-flex;
+  align-items: center;
+  background-color: #343a40;
+  border-radius: 15px; /* Изменено */
+  height: 50px; /* Изменено */
+  width: 400px; /* Изменено */
+  border: 1px solid black;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавлено */
+  font-size: 20px;
+  justify-content: center;
+}
+
+
+
+footer {
+  text-align: right;
+  padding: 20px;
+}
+
+.next-page-button {
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Dashboard</title>
+  <link rel="stylesheet" href="styles_projects.css">
+</head>
+<body>
+
+  <header>
+    <div class="user-info">
+      <span>{{ name }}</span>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+
+    <aside class="sidebar left-sidebar">
+      <button class="sidebar-button">Frames</button>
+      <button class="sidebar-button">Solar panels</button>
+      <button class="sidebar-button"></button>
+      <button class="sidebar-button"></button>
+    </aside>
+
+    <section class="main-content">
+      <button class="create-project-button">Create new project +</button>
+
+      <div class="table-container">
+        <div class="table-cell">Проект 1</div>
+        <div class="table-cell">Проект 2</div>
+        <div class="table-cell">Проект 3</div>
+        <div class="table-cell">Проект 4</div>
+        <div class="table-cell">Проект 5</div>
+        <div class="table-cell">Проект 6</div>
+        <div class="table-cell">Проект 7</div>
+        <div class="table-cell">Проект 8</div>
+      </div>
+    </section>
+
+    <aside class="sidebar right-sidebar">
+        <div class="right-project-item">{{ project_name }}</div>
+        <div class="right-project-item">{{ project_name }}</div>
+        <div class="right-project-item"></div>
+        <div class="right-project-item"></div>
+        <div class="right-project-item"></div>
+        <div class="right-project-item"></div>
+        <div class="right-project-item"></div>
+        <div class="right-project-item"></div>
+    </aside>
+
+  </main>
+
+  <footer>
+    <button class="next-page-button">Next page</button>
+  </footer>
+
+</body>
+</html>
