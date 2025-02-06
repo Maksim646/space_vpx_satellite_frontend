@@ -103,7 +103,7 @@ header {
 .center-container {
   display: flex; /* Или можно использовать margin: 0 auto; */
   justify-content: center; /* Центрирование по горизонтали */
-  align-items: center;  /* Центрирование по вертикали (если нужно) */
+    /* Центрирование по вертикали (если нужно) */
   min-height: 100vh; /* Чтобы таблица была по центру даже если мало контента, можно убрать */
 }
 
@@ -112,17 +112,22 @@ display: grid;
 grid-template-columns: 1fr 1fr; /* Две колонки одинаковой ширины */
 border-radius: 20px; /* Радиус закругления углов */
 overflow: hidden; /* Обрезать содержимое, выходящее за границы закругления */
-width: 400px; /* Ширина таблицы, настройте под ваши нужды */
+height: 750px;
+width: 4000px; /* Ширина таблицы, настройте под ваши нужды */
 background-color:hsla(240, 4%, 5%, 0.63); /* Цвет фона таблицы */
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавляем тень */
 position: relative;
 }
 
 .table-cell {
-padding: 10px; /* Отступы внутри ячеек */
-border-bottom: 1px solid #000000; /* Горизонтальная разделительная линия */
-color: white; /* Цвет текста */
-font-family: sans-serif;
+  padding: 10px; /* Отступы внутри ячеек */
+  border-bottom: 1px solid #000000; /* Горизонтальная разделительная линия */
+  color: white; /* Цвет текста */
+  font-family: sans-serif;
+
+  display: flex;       /* Make the cell a flex container */
+  justify-content: center;  /* Center horizontally */
+  align-items: center;  /* Center vertically */
 }
 
 /* Убрать нижнюю линию у последних ячеек */
@@ -131,14 +136,19 @@ border-bottom: none;
 }
 
 /* Вертикальная линия посередине */
+.table-container {
+  position: relative;
+}
+
 .table-container::after {
-content: "";
-position: absolute;
-top: 0;
-bottom: 0;
-left: 50%;
-width: 1px;
-background-color: #000000; /* Цвет линии */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #000000;
+  clip-path: inset(20% 0 0% 0); /* Top, Right, Bottom, Left */
 }
 
 .right-project-item {
