@@ -15,7 +15,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background-image: url('./assets/images/first_page_wall.png'); /* Замените на URL вашего изображения */
+            background-image: url('pages/assets/images/first_page_wall.png'); /* Замените на URL вашего изображения */
             background-size: cover; /* Чтобы изображение занимало всю площадь */
             background-position: center;
         }
@@ -88,7 +88,7 @@
             };
 
             try {
-                const response = await fetch('http://localhost:8000/auth/login', {
+                const response = await fetch('http://localhost:8206/auth/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -102,7 +102,6 @@
                     // Сохраняем токен в localStorage
                     localStorage.setItem('access_token', result.access_token); // Предполагается, что токен возвращается в поле "access_token"
 
-                    // Перенаправление на страницу управления проектами
                     window.location.href = 'http://localhost/pages/projects.html'; // Замените на нужный вам URL
                 } else {
                     const error = await response.json();
