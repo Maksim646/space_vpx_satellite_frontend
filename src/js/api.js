@@ -7,7 +7,7 @@ async function fetchUserData() {
   }
 
   try {
-    const response = await fetch("http://localhost:8206/user/get_me", {
+    const response = await fetch("http://158.160.187.238:8206/user/get_me", {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${accessToken}`,
@@ -40,7 +40,7 @@ async function fetchUserData() {
     const limit = 8;
     const sortField = "created_at";
 
-    const url = `http://localhost:8206/projects/user_projects?offset=${offset}&limit=${limit}&sort[field]=${sortField}`;
+    const url = `http://158.160.187.238:8206/projects/user_projects?offset=${offset}&limit=${limit}&sort[field]=${sortField}`;
 
     try {
       const response = await fetch(url, {

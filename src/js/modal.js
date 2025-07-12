@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         const accessToken = localStorage.getItem('access_token');
   
-        const url = "http://localhost:8206/cube_sat_project"; // Замените на ваш URL для создания проекта
+        const url = "http://158.160.187.238:8206/cube_sat_project"; // Замените на ваш URL для создания проекта
   
         try {
           const response = await fetch(url, {

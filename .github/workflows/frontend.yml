@@ -18,6 +18,15 @@ jobs:
     - name: Run tests
       run: npm test
 
+    - name: Setup docker-compose.yml from secret
+      run: |
+        printf '%s\n' "$DOCKER_COMPOSE_YML" > docker-compose.yml
+      env:
+        DOCKER_COMPOSE_YML: ${{ secrets.DOCKER_COMPOSE_YML }}
+
+    - name: Check docker-compose.yml file
+      run: cat docker-compose.yml
+
     - name: Build Docker image
       run: docker build -t frontend-app .
 
