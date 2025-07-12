@@ -27,9 +27,9 @@ jobs:
     - name: Deploy to VM via SSH
       uses: appleboy/ssh-action@v1.0.0
       with:
-        host: ${{ secrets.VM_HOST }}
-        username: ${{ secrets.VM_USER }}
-        key: ${{ secrets.VM_SSH_KEY }}
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
         script: |
           cd ~/frontend
           git pull
@@ -37,4 +37,4 @@ jobs:
           docker compose up -d --build
 
     - name: Health check
-      run: curl --fail http://localhost:80 || exit 1
+      run: curl --fail http://158.160.187.238:80 || exit 1
