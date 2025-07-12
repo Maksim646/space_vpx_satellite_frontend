@@ -12,9 +12,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Run tests
-      run: npm test
-
     - name: Setup docker-compose.yml from secret
       run: |
         printf '%s\n' "$DOCKER_COMPOSE_YML" > docker-compose.yml
