@@ -31,7 +31,7 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd ~/frontend
+          cd ~/satellite_assembly/satellite_assembler/space_vpx_satellite_frontend
           git pull
           docker compose down
           docker compose up -d --build
